@@ -1,6 +1,7 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
 
+import { StoryRoot } from "../../helpers/StoryRoot";
 import { Example } from "./Example";
 
 export default {
@@ -14,4 +15,8 @@ export default {
     },
 } as ComponentMeta<typeof Example>;
 
-export const Template: ComponentStory<typeof Example> = (args) => <Example {...args} />;
+export const Template: ComponentStory<typeof Example> = (args) => (
+    <StoryRoot>
+        <Example {...args} />
+    </StoryRoot>
+);
